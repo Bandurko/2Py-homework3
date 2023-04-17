@@ -15,12 +15,11 @@
 #     6
 #     -> 5
 
-nums = input('Введите список значений через пробел: ').split()
-x = input('Задайте число: ')
-min = nums[0]
-i = 1
-while i < (len(nums)):
-    if (x - nums[i]) <= min and (x - nums[i]) > 0:
+nums = list (map (int, input('Введите список значений через пробел: ').split()))
+x = int (input('Задайте число: '))
+min = nums[0] 
+for i in range(1, len(nums)):
+    if abs (nums[i] - x) < abs (min - x):
         min = nums[i]
         i += 1
 print(f'Самый близкий по величине элемент к заданному числу {x} является {min}')
