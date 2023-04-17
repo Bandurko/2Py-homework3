@@ -14,8 +14,8 @@
 #     3
 #     -> 1
 
-nums = input('Введите список значений через пробел: ').split()
-x = input('Введите искомое число: ')
+nums = list (map(int, input('Введите список значений через пробел: ').split()))
+x = int (input('Введите искомое число: '))
 count = 0
 for i in range(len(nums)):
     if nums[i] == x:
